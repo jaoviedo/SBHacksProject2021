@@ -63,7 +63,7 @@ function changeColor1() {
         }
       }
     }
-    return points - positioned;
+    return points;
   }
 
 
@@ -96,8 +96,7 @@ function updateTable(){
     this.alert("Guess Submitted!");
     var positioned = evalPosition();
     var matched = evalColor();
-    var points = positioned + matched;
-    if(points == 4){
+    if(position == 4){
       window.alert("You WIN!!!!!!!!");
       location.reload();
     }else{
@@ -107,7 +106,7 @@ function updateTable(){
         location.reload();
       }
       window.alert("WRONG! " + positioned + " color(s) are in the correct position and " + matched + " matching color(s).");
-      updateTable(positioned, matched);
+      updateTable();
       guessNum++;
     }
     
