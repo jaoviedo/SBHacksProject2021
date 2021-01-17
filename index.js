@@ -40,7 +40,8 @@ function changeColor1() {
         elem.style.background = newColor;
     }
   }
-  function evalGuess(){
+
+  function evalPosition(){
     var points = 0;
     var i;
     for (i = 0; i < 4; i++){
@@ -49,6 +50,21 @@ function changeColor1() {
       }
     }
     return points;
+  }
+
+  function evalColor(){
+    var points = 0;
+    var positioned = evalPosition();
+    var i;
+    var j;
+    for(i = 0; i < 4; i++){
+      for(j = 0; j < 4; j++){
+        if(correctColors[i] == submittedColors[j]){
+          points++;
+        }
+      }
+    }
+    return points - positioned;
   }
 
 function updateTable(){
@@ -72,16 +88,19 @@ function updateTable(){
 
   function eval(){
     this.alert("Guess Submitted!");
-    var points = evalGuess();
+    var positioned = evalPosition();
+    var matched = evalColor();
+    var points = positioned + matched;
     if(points == 4){
       window.alert("You WIN!!!!!!!!");
       location.reload();
     }else{
-      if(guessNum == 6){
+      if(guessNum == 9){
         window.alert("You Lose! Out of Guesses.");
+        window.alert("Correct Answer: " + correctColors);
         location.reload();
       }
-      window.alert("WRONG! You got " + points + " points...");
+      window.alert("WRONG! " + positioned + " color(s) are in the correct position and " + matched + " matching color(s).");
       updateTable();
       guessNum++;
     }
@@ -92,9 +111,20 @@ function getRandomColors(){
   var generated = 0;
   var outputArr = [];
   var i;
+  var j;
+  var inList = false;
   for (i = 0; i < 4; i++){
+    inList = false;
     generated = Math.floor(Math.random() * 4);
-    outputArr.push(colorList[generated]);
+    for(j = 0; j < i; j++){
+      if(outputArr[j] == colorList[generated]){
+        i--;
+        inList = true;
+      }
+    }
+    if(!inList){
+      outputArr.push(colorList[generated]);
+    }
   }
   return outputArr;
 }
