@@ -50,6 +50,16 @@ function changeColor1() {
     return points;
   }
 
+function updateTable(){
+  var elem1 = document.getElementById('entry1');
+  elem1.textContent = submittedColors[0];
+  var elem2 = document.getElementById('entry2');
+  elem2.textContent = submittedColors[1];
+  var elem3 = document.getElementById('entry3');
+  elem3.textContent = submittedColors[2];
+  var elem4 = document.getElementById('entry4');
+  elem4.textContent = submittedColors[3];
+}
 
   function eval(){
     this.alert("Guess Submitted!");
@@ -59,6 +69,7 @@ function changeColor1() {
       location.reload();
     }else{
       window.alert("WRONG! You got " + points + " points...");
+      updateTable();
     }
     
   }
