@@ -3,9 +3,10 @@ window.onload = function() {
     this.alert("Loaded!");
 }
 
+var guessNum = 1;
 var submittedColors = ["lightblue","lightblue","lightblue","lightblue"];
 var correctColors = getRandomColors();
-//window.alert(correctColors); 
+window.alert(correctColors); 
 
 function changeColor1() {
     var newColor = prompt("Please Enter your Color:", "Color")
@@ -58,6 +59,10 @@ function changeColor1() {
       window.alert("You WIN!!!!!!!!");
       location.reload();
     }else{
+      if(guessNum == 7){
+        window.alert("You Lose! Out of Guesses.");
+
+      }
       window.alert("WRONG! You got " + points + " points...");
     }
     
