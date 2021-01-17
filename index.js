@@ -54,7 +54,6 @@ function changeColor1() {
 
   function evalColor(){
     var points = 0;
-    var positioned = evalPosition();
     var i;
     var j;
     for(i = 0; i < 4; i++){
@@ -67,7 +66,8 @@ function changeColor1() {
     return points - positioned;
   }
 
-function updateTable(x, y){
+
+function updateTable(){
   var num1 = 1 + guessNum*4;
   var num2 = 2 + guessNum*4;
   var num3 = 3 + guessNum*4;
@@ -84,16 +84,13 @@ function updateTable(x, y){
   elem3.textContent = submittedColors[2];
   var elem4 = document.getElementById(temp4);
   elem4.textContent = submittedColors[3];
-  updatePointsColumn(x,y);
-}
-function updatePointsColumn(x,y){
   var numTemp = 1 + guessNum;
   var pointTemp = 'pointEntry' + numTemp;
   var elem5 = document.getElementById(pointTemp);
-  var addString = x + " color(s) are in the correct position and " + y + " matching color(s).";
-  window.alert(addString);
-  elem5.textContent = addString;
+  elem5.textContent = evalPosition() + " color(s) are in the correct position and " + evalColor() + " matching color(s).";
 }
+
+
 
   function eval(){
     this.alert("Guess Submitted!");
