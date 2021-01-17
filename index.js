@@ -58,7 +58,8 @@ function changeColor1() {
     var j;
     for(i = 0; i < 4; i++){
       for(j = 0; j < 4; j++){
-        if(correctColors[i] == submittedColors[j]){
+        var fixedString = submittedColors[j].toLowerCase();
+        if(correctColors[i] == fixedString){
           points++;
         }
       }
