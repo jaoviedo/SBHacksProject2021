@@ -1,12 +1,11 @@
 /* CSS will go here*/
 
 #Guess1{
-font-family: Impact;
+font-family: 'Times New Roman', Times, serif;
   color: white;
   position: absolute;
-  top: 50px;
-  left: 300px;
-  right: 300px;
+  top: 500px;
+  left: 600px;
   text-align: center;
   -webkit-text-stroke: 1px black;
 }
@@ -14,19 +13,17 @@ font-family: Impact;
 font-family: 'Times New Roman', Times, serif;
   color: white;
   position: absolute;
-  top: 200px;
-  left: 300px;
-  right: 300px;
+  top: 500px;
+  left: 800px;
   text-align: center;
   -webkit-text-stroke: 1px black;
 }
 #Guess3{
-font-family: Impact;
+font-family: 'Times New Roman', Times, serif;
   color: white;
   position: absolute;
-  top: 400px;
-  left: 300px;
-  right: 300px;
+  top: 500px;
+  left: 1000px;
   text-align: center;
   -webkit-text-stroke: 1px black;
 }
@@ -34,9 +31,8 @@ font-family: Impact;
 font-family: 'Times New Roman', Times, serif;
   color: white;
   position: absolute;
-  top: 600px;
-  left: 300px;
-  right: 300px;
+  top: 500px;
+  left: 1200px;
   text-align: center;
   -webkit-text-stroke: 1px black;
 }
@@ -44,9 +40,8 @@ font-family: 'Times New Roman', Times, serif;
 #circle1 {
     background: lightblue;
     position: absolute;
-    top: 20px;
-    left: 380px;
-    right: 380px;
+    top: 350px;
+    left: 580px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -54,9 +49,8 @@ font-family: 'Times New Roman', Times, serif;
 #circle2 {
     background: lightblue;
     position: absolute;
-    top: 220px;
-    left: 380px;
-    right: 380px;
+    top: 350px;
+    left: 780px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -64,9 +58,8 @@ font-family: 'Times New Roman', Times, serif;
 #circle3 {
     background: lightblue;
     position: absolute;
-    top: 420px;
-    left: 380px;
-    right: 380px;
+    top: 350px;
+    left: 980px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -74,9 +67,8 @@ font-family: 'Times New Roman', Times, serif;
 #circle4 {
     background: lightblue;
     position: absolute;
-    top: 620px;
-    left: 380px;
-    right: 380px;
+    top: 350px;
+    left: 1180px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -85,9 +77,8 @@ font-family: 'Times New Roman', Times, serif;
 font-family: 'Times New Roman', Times, serif;
   color:grey;
   position: absolute;
-  top: 200px;
-  left: 50px;
-  right: 50px;
+  top: 590px;
+  left: 880px;
   text-align: left;
   -webkit-text-stroke: 1px black;
 }
@@ -96,8 +87,8 @@ font-family: 'Times New Roman', Times, serif;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(255, 34, 207);
   position: absolute;
-  top: 50px;
-  left: 10px;
+  top: 590px;
+  left: 580px;
 }
 
 table, td, th {
@@ -107,10 +98,32 @@ table{
   display: table;
   position: absolute;
   border-collapse: collapse;
-  right: 100px;
-  top: 100px;
+  right: 300px;
+  top: 300px;
   border-spacing: 50px;
   border-color: black;
   padding: 15px;
   text-align: left;
+}
+
+#Title{
+  font-family: 'Times New Roman', Times, serif;
+  color:grey;
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  text-align: left;
+  -webkit-text-stroke: 1px black;
+  font-size: 32;
+}
+
+#GameTitle{
+  font-family: 'Times New Roman', Times, serif;
+  color:grey;
+  position: absolute;
+  top: 20px;
+  left: 800px;
+  text-align: left;
+  -webkit-text-stroke: 1px black;
+  font-size: 32;
 }
