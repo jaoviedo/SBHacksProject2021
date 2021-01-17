@@ -5,7 +5,7 @@ window.onload = function() {
 
 var submittedColors = ["lightblue","lightblue","lightblue","lightblue"];
 var correctColors = getRandomColors();
-window.alert(correctColors); 
+//window.alert(correctColors); 
 
 function changeColor1() {
     var newColor = prompt("Please Enter your Color:", "Color")
