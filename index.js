@@ -64,10 +64,10 @@ function changeColor1() {
         }
       }
     }
-    return points;
+    return points - positioned;
   }
 
-function updateTable(){
+function updateTable(x, y){
   var num1 = 1 + guessNum*4;
   var num2 = 2 + guessNum*4;
   var num3 = 3 + guessNum*4;
@@ -76,8 +76,6 @@ function updateTable(){
   var temp2 = 'entry' + num2;
   var temp3 = 'entry' + num3;
   var temp4 = 'entry' + num4;
-  var numTemp = 1 + guessNum;
-  var pointTemp = 'pointEntry' + numTemp;
   var elem1 = document.getElementById(temp1);
   elem1.textContent = submittedColors[0];
   var elem2 = document.getElementById(temp2);
@@ -86,15 +84,23 @@ function updateTable(){
   elem3.textContent = submittedColors[2];
   var elem4 = document.getElementById(temp4);
   elem4.textContent = submittedColors[3];
+  updatePointsColumn(x,y);
+}
+function updatePointsColumn(x,y){
+  var numTemp = 1 + guessNum;
+  var pointTemp = 'pointEntry' + numTemp;
   var elem5 = document.getElementById(pointTemp);
-  elem5.textContent = evalPosition() + " color(s) are in the correct position and " + evalRandomColors() + " matching color(s)."
+  var addString = x + " color(s) are in the correct position and " + y + " matching color(s).";
+  window.alert(addString);
+  elem5.textContent = addString;
 }
 
   function eval(){
     this.alert("Guess Submitted!");
     var positioned = evalPosition();
     var matched = evalColor();
-    if(positioned == 4){
+    var points = positioned + matched;
+    if(points == 4){
       window.alert("You WIN!!!!!!!!");
       location.reload();
     }else{
@@ -104,13 +110,13 @@ function updateTable(){
         location.reload();
       }
       window.alert("WRONG! " + positioned + " color(s) are in the correct position and " + matched + " matching color(s).");
-      updateTable();
+      updateTable(positioned, matched);
       guessNum++;
     }
     
   }
 function getRandomColors(){
-  var colorList = ["red", "orange", "yellow", "green", "blue", "purple", "white", "black"]
+  var colorList = ["red", "orange", "yellow", "green", "blue", "purple", "white", "black" ]
   var generated = 0;
   var outputArr = [];
   var i;
@@ -118,7 +124,7 @@ function getRandomColors(){
   var inList = false;
   for (i = 0; i < 4; i++){
     inList = false;
-    generated = Math.floor(Math.random() * 8);
+    generated = Math.floor(Math.random() * 4);
     for(j = 0; j < i; j++){
       if(outputArr[j] == colorList[generated]){
         i--;
