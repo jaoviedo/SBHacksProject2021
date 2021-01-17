@@ -52,9 +52,11 @@ function changeColor1() {
 
 
   function eval(){
+    this.alert("Guess Submitted!");
     var points = evalGuess();
     if(points == 4){
-      
+      print("You WIN!!!!!!!!");
+      location.reload();
     }
     
   }
