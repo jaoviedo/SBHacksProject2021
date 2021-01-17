@@ -3,6 +3,8 @@ window.onload = function() {
     this.alert("Loaded!");
 }
 
+var correctColors = getRandomColors();
+
 function changeColor1() {
     var newColor = prompt("Please Enter your Color:", "Color")
     if(newColor != null){
