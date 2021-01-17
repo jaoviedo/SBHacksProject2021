@@ -38,7 +38,6 @@ function changeColor1() {
     var elem4 = document.getElementById('circle4');
     
   }
-
 function getRandomColors(){
   var colorList = ["red", "orange", "yellow", "green", "blue", "violet", "white", "black" ]
   var generated = 0;
