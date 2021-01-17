@@ -96,7 +96,7 @@ function updateTable(){
     this.alert("Guess Submitted!");
     var positioned = evalPosition();
     var matched = evalColor();
-    if(position == 4){
+    if(positioned == 4){
       window.alert("You WIN!!!!!!!!");
       location.reload();
     }else{
@@ -120,7 +120,7 @@ function getRandomColors(){
   var inList = false;
   for (i = 0; i < 4; i++){
     inList = false;
-    generated = Math.floor(Math.random() * 4);
+    generated = Math.floor(Math.random() * 8);
     for(j = 0; j < i; j++){
       if(outputArr[j] == colorList[generated]){
         i--;
