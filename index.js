@@ -39,6 +39,24 @@ function changeColor1() {
     var elem3 = document.getElementById('circle3');
     var elem4 = document.getElementById('circle4');
     
+    var points = 0;
+    var guessColors = [elem1.style.color, elem2.style.color, elem3.style.color, elem4.style.color];
+    var i;
+    for (i = 0; i < 4; i++){
+      if(guessColors[i] == correctColors[i]){
+        points++;
+      }
+    }
+    return points;
+  }
+
+
+  function eval(){
+    var points = evalGuess();
+    if(points == 4){
+      
+    }
+    
   }
 
 function getRandomColors(){
@@ -50,4 +68,5 @@ function getRandomColors(){
     generated = Math.floor(Math.random() * 8);
     outputArr.push(colorList[generated]);
   }
+  return outputArr
 }
