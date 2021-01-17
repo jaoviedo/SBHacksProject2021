@@ -64,7 +64,7 @@ function changeColor1() {
         }
       }
     }
-    return points - positioned;
+    return points;
   }
 
 function updateTable(){
@@ -90,8 +90,7 @@ function updateTable(){
     this.alert("Guess Submitted!");
     var positioned = evalPosition();
     var matched = evalColor();
-    var points = positioned + matched;
-    if(points == 4){
+    if(positioned == 4){
       window.alert("You WIN!!!!!!!!");
       location.reload();
     }else{
@@ -107,7 +106,7 @@ function updateTable(){
     
   }
 function getRandomColors(){
-  var colorList = ["red", "orange", "yellow", "green", "blue", "purple", "white", "black" ]
+  var colorList = ["red", "orange", "yellow", "green", "blue", "purple", "white", "black"]
   var generated = 0;
   var outputArr = [];
   var i;
@@ -115,7 +114,7 @@ function getRandomColors(){
   var inList = false;
   for (i = 0; i < 4; i++){
     inList = false;
-    generated = Math.floor(Math.random() * 4);
+    generated = Math.floor(Math.random() * 8);
     for(j = 0; j < i; j++){
       if(outputArr[j] == colorList[generated]){
         i--;
