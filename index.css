@@ -133,3 +133,13 @@ table{
 body{
   background-color:whitesmoke;
 }
+
+#Credits{
+  font-family: 'Times New Roman', Times, serif;
+  color:grey;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 16;
+
+}
