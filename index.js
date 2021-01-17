@@ -3,6 +3,8 @@ window.onload = function() {
     this.alert("Loaded!");
 }
 
+var correctColors = getRandomColors();
+
 function changeColor1() {
     var newColor = prompt("Please Enter your Color:", "Color")
     if(newColor != null){
@@ -43,7 +45,7 @@ function getRandomColors(){
   var generated = 0;
   var outputArr = [];
   var i;
-  for (i = 0; i < 5; i++){
+  for (i = 0; i < 4; i++){
     generated = Math.floor(Math.random() * 8);
     outputArr.push(colorList[generated]);
   }
