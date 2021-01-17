@@ -32,5 +32,9 @@ function changeColor1() {
     }
   }
   function evalGuess(){
-      
+    var elem1 = document.getElementById('circle1');
+    var elem2 = document.getElementById('circle2');
+    var elem3 = document.getElementById('circle3');
+    var elem4 = document.getElementById('circle4');
+    
   }
