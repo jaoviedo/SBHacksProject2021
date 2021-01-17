@@ -3,7 +3,7 @@ window.onload = function() {
     this.alert("Loaded!");
 }
 
-var guessNum = 1;
+var guessNum = 0;
 var submittedColors = ["lightblue","lightblue","lightblue","lightblue"];
 var correctColors = getRandomColors();
 window.alert(correctColors); 
@@ -52,13 +52,21 @@ function changeColor1() {
   }
 
 function updateTable(){
-  var elem1 = document.getElementById('entry1');
+  var num1 = 1 + guessNum*4;
+  var num2 = 2 + guessNum*4;
+  var num3 = 3 + guessNum*4;
+  var num4 = 4 + guessNum*4;
+  var temp1 = 'entry' + num1;
+  var temp2 = 'entry' + num2;
+  var temp3 = 'entry' + num3;
+  var temp4 = 'entry' + num4;
+  var elem1 = document.getElementById(temp1);
   elem1.textContent = submittedColors[0];
-  var elem2 = document.getElementById('entry2');
+  var elem2 = document.getElementById(temp2);
   elem2.textContent = submittedColors[1];
-  var elem3 = document.getElementById('entry3');
+  var elem3 = document.getElementById(temp3);
   elem3.textContent = submittedColors[2];
-  var elem4 = document.getElementById('entry4');
+  var elem4 = document.getElementById(temp4);
   elem4.textContent = submittedColors[3];
 }
 
@@ -69,7 +77,7 @@ function updateTable(){
       window.alert("You WIN!!!!!!!!");
       location.reload();
     }else{
-      if(guessNum == 7){
+      if(guessNum == 6){
         window.alert("You Lose! Out of Guesses.");
         location.reload();
       }
