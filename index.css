@@ -91,4 +91,15 @@ font-family: 'Times New Roman', Times, serif;
   text-align: left;
   -webkit-text-stroke: 1px black;
 }
+table, th, td{
+    border: 1px solid black;
+}
+table{
+  display: table;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: black;
 }
