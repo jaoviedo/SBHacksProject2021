@@ -87,7 +87,9 @@ function updateTable(){
   var numTemp = 1 + guessNum;
   var pointTemp = 'pointEntry' + numTemp;
   var elem5 = document.getElementById(pointTemp);
-  elem5.textContent = evalPosition() + " color(s) are in the correct position and " + evalColor() + " matching color(s).";
+  var white = evalColor() - evalPosition();
+  var red = evalPosition();
+  elem5.textContent = white + " white peg(s), " + red + " red peg(s).";
 }
 
 
