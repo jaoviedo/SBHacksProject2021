@@ -1,6 +1,6 @@
 //Your JavaScript code will go here!
 window.onload = function() {
-    this.alert("Loaded!");
+    this.alert("Playing Mastermind");
 }
 
 var guessNum = 0;
@@ -87,9 +87,7 @@ function updateTable(){
   var numTemp = 1 + guessNum;
   var pointTemp = 'pointEntry' + numTemp;
   var elem5 = document.getElementById(pointTemp);
-  var white = evalColor() - evalPosition();
-  var red = evalPosition();
-  elem5.textContent = white + " white peg(s), " + red + " red peg(s).";
+  elem5.textContent = evalPosition() + " red peg(s) " + (evalColor() - evalPosition()) + " white peg(s)";
 }
 
 
@@ -102,13 +100,13 @@ function updateTable(){
       window.alert("You WIN!!!!!!!!");
       location.reload();
     }else{
+      updateTable();
+      window.alert("WRONG! " + positioned + " color(s) are in the correct position and " + matched + " matching color(s).");
       if(guessNum == 9){
         window.alert("You Lose! Out of Guesses.");
         window.alert("Correct Answer: " + correctColors);
         location.reload();
       }
-      window.alert("WRONG! " + positioned + " color(s) are in the correct position and " + matched + " matching color(s).");
-      updateTable();
       guessNum++;
     }
     
