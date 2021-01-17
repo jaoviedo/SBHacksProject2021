@@ -44,7 +44,7 @@ function getRandomColors(){
   var generated = 0;
   var outputArr = [];
   var i;
-  for (i = 0; i < 4; i++){
+  for (i = 0; i < 5; i++){
     generated = Math.floor(Math.random() * 8);
     outputArr.push(colorList[generated]);
   }
