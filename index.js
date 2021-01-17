@@ -41,10 +41,10 @@ function changeColor1() {
 
 function getRandomColors(){
   var colorList = ["red", "orange", "yellow", "green", "blue", "violet", "white", "black" ]
-  var generated = 30;
+  var generated = 0;
   var outputArr = [];
   var i;
-  for (i = 0; i < 5; i++){
+  for (i = 0; i < 4; i++){
     generated = Math.floor(Math.random() * 8);
     outputArr.push(colorList[generated]);
   }
