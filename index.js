@@ -61,9 +61,10 @@ function changeColor1() {
     }else{
       if(guessNum == 7){
         window.alert("You Lose! Out of Guesses.");
-
+        location.reload();
       }
       window.alert("WRONG! You got " + points + " points...");
+      guessNum++;
     }
     
   }
