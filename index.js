@@ -101,7 +101,7 @@ function updateTable(){
       location.reload();
     }else{
       updateTable();
-      window.alert("WRONG! " + evalPosition() + " red peg(s) " + (evalColor() - evalPosition()) + " white peg(s)");
+      window.alert("WRONG! " + positioned + " red peg(s) and " + (matched - positioned) + " white peg(s).");
       if(guessNum == 9){
         window.alert("You Lose! Out of Guesses.");
         window.alert("Correct Answer: " + correctColors);
