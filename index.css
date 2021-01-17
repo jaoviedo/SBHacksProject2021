@@ -129,3 +129,7 @@ table{
   -webkit-text-stroke: 1px black;
   font-size: 32;
 }
+
+body{
+  background-color:whitesmoke;
+}
